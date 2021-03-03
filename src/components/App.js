@@ -5,16 +5,24 @@ import Filters from './Filters';
 import getDataFromApi from '../services/getData';
 
 function App() {
-const [characters, setCharacters] = useState ([]);
+  const [characters, setCharacters] = useState([]);
+  const [name, setName] = useState('');
 
   useEffect(() => {
     getDataFromApi().then(data => setCharacters(data));
   }, [])
 
+  const handleInput = (input) => {
+    if (input.key === 'name') {
+      setName(input.value);
+    }
+  }
+  const filteredCharacters = characters.filter(character => { return character.name.toLowerCase().includes(name.toLowerCase()) });
+
   return (
     <main>
-    <Filters />
-    <CharacterList characters= {characters}/>
+      <Filters handleInput={handleInput} />
+      <CharacterList characters={filteredCharacters} />
     </main>
   );
 }
