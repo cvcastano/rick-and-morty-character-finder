@@ -4,6 +4,7 @@ import CharacterList from './CharacterList';
 import Filters from './Filters';
 import getDataFromApi from '../services/getData';
 import Header from './Header';
+import Footer from './Footer';
 
 function App() {
   const [characters, setCharacters] = useState([]);
@@ -27,6 +28,7 @@ function App() {
       <Filters handleInput={handleInput} />
       <CharacterList characters={filteredCharacters} />
     </main>
+    <Footer />
     </>
   );
 }
