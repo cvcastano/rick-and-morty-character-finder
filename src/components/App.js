@@ -3,6 +3,7 @@ import '../stylesheets/index.scss';
 import CharacterList from './CharacterList';
 import Filters from './Filters';
 import getDataFromApi from '../services/getData';
+import Header from './Header';
 
 function App() {
   const [characters, setCharacters] = useState([]);
@@ -20,10 +21,13 @@ function App() {
   const filteredCharacters = characters.filter(character => { return character.name.toLowerCase().includes(name.toLowerCase()) });
 
   return (
+    <>
+    <Header />
     <main>
       <Filters handleInput={handleInput} />
       <CharacterList characters={filteredCharacters} />
     </main>
+    </>
   );
 }
 

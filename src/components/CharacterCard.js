@@ -7,7 +7,7 @@ function CharacterCard(props) {
             <img
                 className="card-img"
                 src={props.character.image}
-                alt=""
+                alt={`Image of ${props.character.name}`}
             />
             <h4 className="card-title">{props.character.name}</h4>
             <p className="card-text">{props.character.species}</p>
