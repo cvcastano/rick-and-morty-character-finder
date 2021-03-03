@@ -1,16 +1,16 @@
 import '../stylesheets/index.scss';
 
 
-function CharacterCard() {
+function CharacterCard(props) {
     return (
         <>
             <img
                 className="card-img"
-                src="https://rickandmortyapi.com/api/character/avatar/1.jpeg"
+                src={props.character.image}
                 alt=""
             />
-            <h4 className="card-title">Character Name</h4>
-            <p className="card-text">Species</p>
+            <h4 className="card-title">{props.character.name}</h4>
+            <p className="card-text">{props.character.species}</p>
         </>
     );
 }

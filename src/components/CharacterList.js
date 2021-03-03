@@ -2,15 +2,18 @@ import '../stylesheets/index.scss';
 import CharacterCard from './CharacterCard';
 
 
-function CharacterList() {
-
+function CharacterList(props) {
+const characterCard = props.characters.map(character => {
+    console.log(character);
+    return <li key={character.id} className="card"> <CharacterCard character={character} /> </li>
+}) 
 
     return (
         <>
             <ul className="card-list">
-                <li className="card">
-                <CharacterCard/>
-                </li>
+            
+                {characterCard}
+             
             </ul>
         </>
     );
