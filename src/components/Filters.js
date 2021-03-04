@@ -1,31 +1,19 @@
-import React from 'react';
 import '../stylesheets/index.scss';
+import FilterByName from './FilterByName';
+import FilterBySpecies from './FilterBySpecies';
 
-
-
-function Filters(props) {
-
-    const submitHandler= (ev) => {
-        ev.preventDefault();
-    }
-    
-    const handleInput = (ev) => {
-        props.handleInput({
-            key: 'name',
-            value: ev.target.value
-        });
-    }
-    
-    return (
-        <form onSubmit={submitHandler}>
-            <p className="input-group">
-                <label className="label" htmlFor="name">Type to search</label>
-                <input className="input" type="text" id="name" name="name" onChange={handleInput} />
-            </p>
-        </form>
-    );
+const submitHandler = (ev) => {
+  ev.preventDefault();
 }
 
+const Filters = props => {
+  return (
+    <section>
+      <form onSubmit={submitHandler}>
+        <FilterByName filterHandler={props.filterHandler} />
+        <FilterBySpecies filterHandler={props.filterHandler} />
+      </form>
+    </section>
+  )
+}
 export default Filters;
-
-

@@ -11,19 +11,29 @@ import Footer from './Footer';
 function App() {
   const [characters, setCharacters] = useState([]);
   const [name, setName] = useState('');
+  const [species, setSpecies] = useState('all');
 
   useEffect(() => {
     getDataFromApi().then(data => setCharacters(data));
   }, [])
 
-  const handleInput = (input) => {
+  const filterHandler = input => {
+    console.log(input)
     if (input.key === 'name') {
       setName(input.value);
     }
-  }
-  const filteredCharacters = characters.filter(character => {
-    return character.name.toLowerCase().includes(name.toLowerCase());
-  });
+    else if (input.key === 'species') {
+      setSpecies(input.value);
+    }
+  };
+
+  const filteredCharacters = characters
+    .filter(character => {
+      return character.name.toLowerCase().includes(name.toLowerCase());
+    })
+    .filter(character => {
+      return species === 'all' ? true : character.species === species
+    });
 
   const renderDetail = props => {
     const id = parseInt(props.match.params.id);
@@ -31,7 +41,6 @@ function App() {
     const clickedCharacter = characters.find(character => {
       return character.id === id;
     });
-
     return <CharacterDetail character={clickedCharacter} />
   }
 
@@ -41,7 +50,7 @@ function App() {
       <Switch>
         <Route exact path='/'>
           <main className="main">
-            <Filters handleInput={handleInput} />
+            <Filters filterHandler={filterHandler} />
             <CharacterList characters={filteredCharacters} />
           </main>
         </Route>
