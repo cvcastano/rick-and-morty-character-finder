@@ -10,16 +10,16 @@ const FilterBySpecies = props => {
     });
   }
   return (
-    <>
-      <label htmlFor="species">
-        Species:
+    <section className="input-group">
+      <label className="label" htmlFor="species">
+        Species
         </label>
-      <select name="species" id="species" onChange={changeHandler}>
+      <select className="input" name="species" id="species" onChange={changeHandler}>
         <option value="All">All</option>
         <option value="Human">Human</option>
         <option value="Alien">Alien</option>
       </select>
-    </>
+    </section>
   )
 }
 export default FilterBySpecies;
