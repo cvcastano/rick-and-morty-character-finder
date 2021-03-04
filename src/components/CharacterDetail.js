@@ -6,16 +6,16 @@ function CharacterDetail(props) {
 
     if (props.character === undefined) {
         return (
-            <section class="card">
+            <section className="card">
                 <Link className="close__card" to="/">
                     <span className="icon fas fa-times"></span>
                 </Link>
-                <h2>User not found</h2>
+                <h2>Character not found</h2>
             </section>
         );
     } else {
         return (
-            <section class="card">
+            <section className="card">
                 <Link className="close__card" to="/">
                     <span className="fas fa-times"></span>
                 </Link>
