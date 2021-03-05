@@ -1,6 +1,7 @@
 import '../stylesheets/index.scss';
 import { Link } from 'react-router-dom';
 import React from 'react';
+import characterNotFound from '../images/characterNotFound.jpg';
 
 function CharacterDetail(props) {
 
@@ -10,7 +11,8 @@ function CharacterDetail(props) {
                 <Link className="close__card" to="/">
                     <span className="icon fas fa-times"></span>
                 </Link>
-                <h2>Character not found</h2>
+                <img className="detail__card-img" src={characterNotFound} alt="" />
+                <p>You think you're so smart... We only have up to 20 characters to show you (for now).</p>
             </section>
         );
     } else {
