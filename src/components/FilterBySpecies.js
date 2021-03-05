@@ -14,7 +14,7 @@ const FilterBySpecies = props => {
       <label className="label" htmlFor="species">
         Species
         </label>
-      <select className="input" name="species" id="species" onChange={changeHandler}>
+      <select className="input select" name="species" id="species" onChange={changeHandler}>
         <option value="All">All</option>
         <option value="Human">Human</option>
         <option value="Alien">Alien</option>

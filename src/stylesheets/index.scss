@@ -20,8 +20,7 @@ body {
   margin: 0;
 }
 
-//header
-.header-top {
+.header {
   background: $header;
   color: white;
   display: flex;
@@ -40,63 +39,71 @@ body {
   text-align: center;
 }
 
-//main
 .main {
-  display: flex;
-  flex-direction: column;
+  padding-bottom: 1rem;
 }
 
-//input
-.input-group {
-  align-self: flex-end;
-  margin: 10px;
-  width: fit-content;
-  padding: 10px;
-  border: solid 2px $footer;
+.filters {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  box-shadow: 0 0 5px 3px $footer;
   background-color: black;
-  border-radius: 20px;
 }
 
 .label {
-  font-size: 30px;
+  font-size: 2rem;
   color: $main;
 }
 
 .input {
-  border: none;
-  border-bottom: solid 1px $footer;
+  border-radius: 8px;
   outline: none;
   margin: 5px;
   font-family: $main-font;
-  font-size: 20px;
-  background-color: black;
-  color: $footer;
-  width: 100px;
+  font-size: 1.3rem;
+  background-color: $footer;
+  width: 130px;
+  border: solid 1px $footer;
+  box-shadow: 0 0 1px 1px $footer;
+}
+.select {
+  width: fit-content;
 }
 
-//card-item
 .card-list {
-  background: $main;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  flex-wrap: wrap;
-  padding-top: 1.5rem;
+  padding-top: 1rem;
   padding-bottom: 4rem;
+  display: grid;
+  justify-content: center;
+  grid-template-columns: 1fr;
+
+  @media (min-width: 520px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @media (min-width: 768px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  @media (min-width: 992px) {
+    grid-template-columns: repeat(4, 250px);
+  }
+  @media (min-width: 1200px) {
+    grid-template-columns: repeat(5, 210px);
+  }
 }
 
 .card {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
   padding: 10px;
-  margin: 10px;
-  width: fit-content;
-  height: fit-content;
+  margin: 5px;
+  width: 200px;
+  height: 300px;
   background: lighten($main, 30%);
   border: 5px solid $header;
   outline: 1px solid black;
   position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   &:hover {
     background: white;
     border-color: $footer;
@@ -105,23 +112,84 @@ body {
   }
 }
 
+.card-img {
+  height: 170px;
+  border: dotted black 1px;
+  outline-offset: $footer;
+  border-radius: 10px;
+}
+
 .card-title {
   color: desaturate($header, 10%);
-  font-size: 28px;
+  font-size: 20px;
   margin: 0;
+  width: 200px;
+  height: 48px;
 }
 
-.card-text {
-  color: darken($main, 65%);
-  font-size: 16px;
+.icons__container {
+  display: flex;
+  justify-content: space-around;
+}
+
+.icons__box {
   margin: 0;
+  font-size: 12px; 
+  text-align: center;
+
+  &--text {
+    margin: 0;
+    color: black;
+  }
+
+  &--icon {
+    width: 25px;
+    margin-bottom: -5px;
+  }
 }
 
-.card-img {
-  height: 80px;
+
+.detail__main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 5rem;
 }
 
-//footer
+.detail__card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 10px 20px;
+  margin-top: 65px;
+  max-width: 320px;
+  max-height: 568px;
+  background: lighten($main, 30%);
+  border: 15px solid $header;
+  outline: 5px solid black;
+
+  &-img {
+    width: 200px;
+    border: solid black 2px;
+    outline-offset: $footer;
+    border-radius: 10px;
+  }
+  &-title {
+    color: desaturate($header, 10%);
+    font-size: 40px;
+    margin: 0;
+  }
+  &-text {
+    color: darken($main, 65%);
+    font-size: 20px;
+    margin: 0;
+  }
+}
+.close__card {
+  align-self: flex-end;
+}
+
 .footer {
   position: absolute;
   width: 100%;
@@ -150,8 +218,4 @@ body {
     font-size: 16px;
     font-weight: bolder;
   }
-}
-
-.close__card {
-  align-self: flex-end;
 }

@@ -8,12 +8,10 @@ const submitHandler = (ev) => {
 
 const Filters = props => {
   return (
-    <section>
-      <form onSubmit={submitHandler}>
+      <form className="filters" onSubmit={submitHandler}>
         <FilterByName filterHandler={props.filterHandler} />
         <FilterBySpecies filterHandler={props.filterHandler} />
       </form>
-    </section>
   )
 }
 export default Filters;
