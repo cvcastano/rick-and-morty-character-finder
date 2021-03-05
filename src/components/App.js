@@ -35,6 +35,15 @@ function App() {
       return species === 'all' ? true : character.species === species
     });
 
+
+    filteredCharacters.sort(function(a, b){
+      if(a.name < b.name) { return -1; }
+      if(a.name> b.name) { return 1; }
+      return 0;
+  })
+  
+  const sortedCharacters = filteredCharacters.sort()
+
   const renderDetail = props => {
     const id = parseInt(props.match.params.id);
 
