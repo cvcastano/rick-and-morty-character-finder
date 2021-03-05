@@ -54,7 +54,9 @@ function App() {
             <CharacterList characters={filteredCharacters} />
           </main>
         </Route>
-        <Route path='/character/:id' render={renderDetail} />
+        <main className="detail__main">
+          <Route path='/character/:id' render={renderDetail} />
+        </main>
       </Switch>
       <Footer />
     </>

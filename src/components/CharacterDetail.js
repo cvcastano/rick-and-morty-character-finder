@@ -6,7 +6,7 @@ function CharacterDetail(props) {
 
     if (props.character === undefined) {
         return (
-            <section className="card">
+            <section className="detail__card">
                 <Link className="close__card" to="/">
                     <span className="icon fas fa-times"></span>
                 </Link>
@@ -15,21 +15,21 @@ function CharacterDetail(props) {
         );
     } else {
         return (
-            <section className="card">
+            <section className="detail__card">
                 <Link className="close__card" to="/">
                     <span className="fas fa-times"></span>
                 </Link>
                 <img
-                    className="card-img"
+                    className="detail__card-img"
                     src={props.character.image}
                     alt={`Image of ${props.character.name}`}
                     title={`Image of ${props.character.name}`}
                 />
-                <h4 className="card-title">{props.character.name}</h4>
-                <p className="card-text">Status: {props.character.status}</p>
-                <p className="card-text">Species: {props.character.species}</p>
-                <p className="card-text">Origin: {props.character.origin}</p>
-                <p className="card-text">Episodes: {props.character.episode}</p>
+                <h4 className="detail__card-title">{props.character.name}</h4>
+                <p className="detail__card-text">Status: {props.character.status}</p>
+                <p className="detail__card-text">Species: {props.character.species}</p>
+                <p className="detail__card-text">Origin: {props.character.origin}</p>
+                <p className="detail__card-text">Episodes: {props.character.episode}</p>
             </section>
         );
     }
