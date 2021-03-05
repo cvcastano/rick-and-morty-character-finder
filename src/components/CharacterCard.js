@@ -32,7 +32,7 @@ function CharacterCard(props) {
             <Link to={`/character/${props.character.id}`}>
                 <img className="card-img" src={props.character.image} alt={`${props.character.name} image`} title={`${props.character.name} image`} />
                 <h4 className="card-title">{props.character.name}</h4>
-                <section class="icons__container">
+                <section className="icons__container">
                     <div className="icons__box">
                         <p className="icons__box--text">Species</p>
                         <img className="icons__box--icon"

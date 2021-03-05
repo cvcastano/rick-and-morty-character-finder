@@ -11,7 +11,7 @@ function CharacterDetail(props) {
                 <Link className="close__card" to="/">
                     <span className="icon fas fa-times"></span>
                 </Link>
-                <img className="detail__card-img" src={characterNotFound} alt="" />
+                <img className="detail__card-img" src={characterNotFound} alt="Ricky's image" title="Ricky's image" />
                 <p>You think you're so smart... We only have up to 20 characters to show you (for now).</p>
             </section>
         );
