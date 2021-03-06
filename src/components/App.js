@@ -5,8 +5,8 @@ import Header from './Header';
 import Filters from './Filters';
 import CharacterList from './CharacterList';
 import CharacterDetail from './CharacterDetail';
-import getDataFromApi from '../services/getData';
 import Footer from './Footer';
+import getDataFromApi from '../services/getData';
 
 function App() {
   const [characters, setCharacters] = useState([]);
@@ -20,7 +20,6 @@ function App() {
   }, [])
 
   const filterHandler = input => {
-    console.log(input)
     if (input.key === 'name') {
       setName(input.value);
     }
@@ -60,14 +59,10 @@ function App() {
       <Header />
       <Switch>
         <Route exact path='/'>
-          <main className="main">
-            <Filters filterHandler={filterHandler} />
-            <CharacterList characters={filteredCharacters} />
-          </main>
+          <Filters filterHandler={filterHandler} />
+          <CharacterList characters={filteredCharacters} />
         </Route>
-        <main className="detail__main">
-          <Route path='/character/:id' render={renderDetail} />
-        </main>
+        <Route path='/character/:id' render={renderDetail} />
       </Switch>
       <Footer />
     </>
