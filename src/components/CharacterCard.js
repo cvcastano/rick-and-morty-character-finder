@@ -1,4 +1,4 @@
-import '../stylesheets/index.scss';
+import '../stylesheets/CharacterCard.scss';
 import { Link } from 'react-router-dom';
 import dead from '../images/dead.png';
 import alive from '../images/alive.png';
@@ -26,7 +26,6 @@ function CharacterCard(props) {
         }
     }
 
-    // console.log(props.character)
     return (
         <>
             <Link to={`/character/${props.character.id}`}>

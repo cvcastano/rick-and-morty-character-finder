@@ -1,0 +1,31 @@
+@import "./index.scss";
+
+.footer {
+  position: absolute;
+  width: 100%;
+  height: 4rem;
+  bottom: 0;
+  background: $footer;
+  text-align: center;
+  font-size: 13px;
+  border-top: solid black 2px;
+  &-icon {
+    color: darken($main, 10%);
+    font-size: large;
+    animation: icon-spin infinite 9s linear;
+    @keyframes icon-spin {
+      from {
+        transform: rotate(0deg);
+      }
+      to {
+        transform: rotate(360deg);
+      }
+    }
+  }
+  &-link {
+    color: $header;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bolder;
+  }
+}

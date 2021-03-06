@@ -1,4 +1,4 @@
-import '../stylesheets/index.scss';
+import '../stylesheets/AllFilters.scss';
 
 function SortByName(props) {
 
@@ -9,20 +9,13 @@ function SortByName(props) {
             value: ev.target.value
         });
     }
-    
 
     return (
         <section className="sort-section">
             <p>Sort: </p>
             <section>
-                {/* <div>
-                    <input type="radio" id="byId" name="sort" value="byId" checked onChange={changeHandler}/>
-                    <label htmlFor="byId"> by Id</label>
-                </div> */}
-                <div>
-                    <input type="radio" id="byName" name="sort" value="byName" onChange={changeHandler} />
-                    <label htmlFor="byName"> alphabetically</label>
-                </div>
+                <input type="radio" id="byName" name="sort" value="byName" onChange={changeHandler} />
+                <label htmlFor="byName"> alphabetically</label>
             </section>
         </section>
     );

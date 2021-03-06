@@ -1,4 +1,4 @@
-import '../stylesheets/index.scss';
+import '../stylesheets/AllFilters.scss';
 
 function FilterByName(props) {
 

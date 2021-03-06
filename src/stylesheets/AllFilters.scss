@@ -1,0 +1,36 @@
+@import "./index.scss";
+
+.filters {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  box-shadow: 0 0 5px 3px $footer;
+  background-color: black;
+}
+
+.label {
+  font-size: 2rem;
+  color: $main;
+  margin: 0;
+}
+
+.input {
+  border-radius: 8px;
+  outline: none;
+  margin: 5px;
+  font-family: $main-font;
+  font-size: 1.3rem;
+  background-color: $footer;
+  width: 130px;
+  border: solid 1px $footer;
+  box-shadow: 0 0 1px 1px $footer;
+}
+.select {
+  width: fit-content;
+}
+
+.sort-section {
+  display: flex;
+  align-items: center;
+  color: $main;
+}

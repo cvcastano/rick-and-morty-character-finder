@@ -1,0 +1,57 @@
+@import "./index.scss";
+
+.main {
+  padding-bottom: 1rem;
+}
+
+.card-list {
+  padding-top: 1rem;
+  padding-bottom: 4rem;
+  display: grid;
+  justify-content: center;
+  grid-template-columns: 1fr;
+
+  @media (min-width: 520px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @media (min-width: 768px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  @media (min-width: 992px) {
+    grid-template-columns: repeat(4, 250px);
+  }
+  @media (min-width: 1200px) {
+    grid-template-columns: repeat(5, 210px);
+  }
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 10px;
+  margin: 5px;
+  width: 200px;
+  height: 300px;
+  background: lighten($main, 30%);
+  border: 5px solid $header;
+  outline: 1px solid black;
+  position: relative;
+  &:hover {
+    background: white;
+    border-color: $footer;
+    box-shadow: 20px 20px 20px rgb(119, 113, 113);
+    outline: none;
+  }
+}
+.no-results-title {
+  margin: 15px;
+}
+
+.no-results-img {
+  margin: 15px;
+  width: 300px;
+  border: solid black 2px;
+  outline-offset: $footer;
+  border-radius: 10px;
+}

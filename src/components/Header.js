@@ -1,5 +1,5 @@
 import React from 'react';
-import '../stylesheets/index.scss';
+import '../stylesheets/Header.scss';
 import logo from '../images/logo.png';
 
 function Header() {

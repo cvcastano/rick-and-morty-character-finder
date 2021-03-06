@@ -1,0 +1,37 @@
+@import "./index.scss";
+
+.card-img {
+  height: 170px;
+  border: dotted black 1px;
+  outline-offset: $footer;
+  border-radius: 10px;
+}
+
+.card-title {
+  color: desaturate($header, 10%);
+  font-size: 20px;
+  margin: 0;
+  width: 200px;
+  height: 48px;
+}
+
+.icons__container {
+  display: flex;
+  justify-content: space-around;
+}
+
+.icons__box {
+  margin: 0;
+  font-size: 12px;
+  text-align: center;
+
+  &--text {
+    margin: 0;
+    color: black;
+  }
+
+  &--icon {
+    width: 25px;
+    margin-bottom: -5px;
+  }
+}

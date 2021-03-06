@@ -1,0 +1,14 @@
+@import "./index.scss";
+
+.header {
+  background: $header;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.logo {
+  width: 400px;
+}

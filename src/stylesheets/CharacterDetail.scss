@@ -1,0 +1,43 @@
+@import "./index.scss";
+
+.detail__main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 5rem;
+  background: $main;
+}
+
+.detail__card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 10px 20px;
+  margin-top: 65px;
+  max-width: 320px;
+  max-height: 568px;
+  background: lighten($main, 30%);
+  border: 15px solid $header;
+  outline: 5px solid black;
+
+  &-img {
+    width: 200px;
+    border: solid black 2px;
+    outline-offset: $footer;
+    border-radius: 10px;
+  }
+  &-title {
+    color: desaturate($header, 10%);
+    font-size: 40px;
+    margin: 0;
+  }
+  &-text {
+    color: darken($main, 65%);
+    font-size: 20px;
+    margin: 0;
+  }
+}
+.close__card {
+  align-self: flex-end;
+}
