@@ -12,6 +12,8 @@ function App() {
   const [characters, setCharacters] = useState([]);
   const [name, setName] = useState('');
   const [species, setSpecies] = useState('all');
+  const [sorting, setSorting] = useState(false);
+
 
   useEffect(() => {
     getDataFromApi().then(data => setCharacters(data));
@@ -25,6 +27,9 @@ function App() {
     else if (input.key === 'species') {
       setSpecies(input.value);
     }
+    else if (input.key === 'sorting') {
+      setSorting(true);
+    }
   };
 
   const filteredCharacters = characters
@@ -33,16 +38,13 @@ function App() {
     })
     .filter(character => {
       return species === 'all' ? true : character.species === species
-    });
-
-
-    filteredCharacters.sort(function(a, b){
-      if(a.name < b.name) { return -1; }
-      if(a.name> b.name) { return 1; }
-      return 0;
-  })
-  
-  const sortedCharacters = filteredCharacters.sort()
+    })
+  if (sorting) {
+    filteredCharacters.sort(function (a, b) {
+      if (a.name < b.name) { return -1; }
+      if (a.name > b.name) { return 1; }
+    })
+  };
 
   const renderDetail = props => {
     const id = parseInt(props.match.params.id);

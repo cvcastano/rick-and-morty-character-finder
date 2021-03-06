@@ -54,6 +54,7 @@ body {
 .label {
   font-size: 2rem;
   color: $main;
+  margin: 0;
 }
 
 .input {
@@ -70,6 +71,13 @@ body {
 .select {
   width: fit-content;
 }
+
+.sort-section {
+  display: flex;
+  align-items: center;
+  color: $main;
+}
+
 
 .card-list {
   padding-top: 1rem;
@@ -134,7 +142,7 @@ body {
 
 .icons__box {
   margin: 0;
-  font-size: 12px; 
+  font-size: 12px;
   text-align: center;
 
   &--text {
@@ -147,7 +155,6 @@ body {
     margin-bottom: -5px;
   }
 }
-
 
 .detail__main {
   display: flex;

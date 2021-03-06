@@ -26,7 +26,7 @@ function CharacterCard(props) {
         }
     }
 
-    console.log(props.character)
+    // console.log(props.character)
     return (
         <>
             <Link to={`/character/${props.character.id}`}>
