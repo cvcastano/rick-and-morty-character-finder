@@ -9,9 +9,10 @@
 
 The exercise consisted of developing a web page with a list of Rick and Morty characters, which could be filtered by the name of the character.  
 
-We had to use React and the service of https://rickandmortyapi.com, which returns information about the first 20 characters of the series, as well as following a series of instructions regarding the components and functionalities of the project. 
 
-The website has an intuitive design with filters and functionalities that show details of the characters' characteristics.
+We had to use `<React>` and the service of https://rickandmortyapi.com, which returns information about the first 20 characters of the series, as well as following a series of instructions regarding the components and functionalities of the project. 
+
+The website has an `<intuitive>` design with filters and functionalities that show details of the characters' characteristics.
 #
 
 ## :iphone: :computer: Responsive design 
@@ -27,33 +28,4 @@ The website has an intuitive design with filters and functionalities that show d
 
 <img align="left" src="https://github.com/Adalab/modulo-3-evaluacion-final-cvcastano/blob/master/media%20for%20readme/components.jpg" width="200"> 
 
-<img align="left" src="https://github.com/Adalab/modulo-3-evaluacion-final-cvcastano/blob/master/media%20for%20readme/stylesheets.jpg" width="200"> 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-:memo:
-
-
-
-
-
-
-
-
-<img align="left" src="https://github.com/Adalab/modulo-3-evaluacion-final-cvcastano/blob/master/src/images/alien.png" width="30" >
+<img align="center" src="https://github.com/Adalab/modulo-3-evaluacion-final-cvcastano/blob/master/media%20for%20readme/stylesheets.jpg" width="200"> 
