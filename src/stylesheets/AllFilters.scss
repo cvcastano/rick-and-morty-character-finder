@@ -1,11 +1,17 @@
 @import "./index.scss";
 
+.filters__container {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: black;
+  justify-content: center;
+  box-shadow: 0 0 5px 3px $footer;
+}
+
 .filters {
   display: flex;
-  justify-content: space-evenly;
   flex-wrap: wrap;
-  box-shadow: 0 0 5px 3px $footer;
-  background-color: black;
+  justify-content: center;
 }
 
 .label {
@@ -13,7 +19,7 @@
   color: $main;
   margin: 0;
   @media (min-width: 520px) {
-   font-size: 1.5rem;
+    font-size: 1.5rem;
   }
   @media (min-width: 768px) {
     font-size: 2rem;
@@ -23,7 +29,7 @@
 .input {
   border-radius: 8px;
   outline: none;
-  margin: 5px;
+  margin: 5px 25px 5px 5px;
   font-family: $main-font;
   font-size: 1.3rem;
   background-color: $footer;
@@ -33,10 +39,32 @@
 }
 .select {
   width: fit-content;
+  margin: 10px;
+  margin: 5px 25px 5px 5px;
+}
+.sort-button {
+  background-color: $footer;
+  text-transform: uppercase;
+  height: fit-content;
+  align-self: center;
+  outline: none;
+  border: none;
+  border-radius: 8px;
+  margin-right: 15px;
+  box-shadow: 0 0 1px 1px $header;
 }
 
-.sort-section {
-  display: flex;
-  align-items: center;
-  color: $main;
+.reset {
+  background-color: $header;
+  text-transform: uppercase;
+  color: $footer;
+  height: 25px;
+  align-self: center;
+  outline: none;
+  border: none;
+  border-radius: 10px;
+  margin-right: 15px;
+  box-shadow: 0 0 1px 1px $footer;
 }
+
+

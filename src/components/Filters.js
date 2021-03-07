@@ -2,6 +2,7 @@ import '../stylesheets/index.scss';
 import FilterByName from './FilterByName';
 import FilterBySpecies from './FilterBySpecies';
 import SortByName from './SortByName';
+import Reset from './Reset';
 
 
 const submitHandler = (ev) => {
@@ -10,11 +11,14 @@ const submitHandler = (ev) => {
 
 const Filters = props => {
   return (
-    <form className="filters" onSubmit={submitHandler}>
-      <FilterByName filterHandler={props.filterHandler} />
-      <FilterBySpecies filterHandler={props.filterHandler} />
+    <section className="filters__container">
+      <form className="filters" onSubmit={submitHandler}>
+        <FilterByName filterHandler={props.filterHandler} />
+        <FilterBySpecies filterHandler={props.filterHandler} />
+      </form>
       <SortByName filterHandler={props.filterHandler} />
-    </form>
+      <Reset resetHandler={props.resetHandler} />
+    </section>
   )
 }
 export default Filters;

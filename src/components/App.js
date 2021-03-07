@@ -8,6 +8,7 @@ import CharacterDetail from './CharacterDetail';
 import Footer from './Footer';
 import getDataFromApi from '../services/getData';
 
+
 function App() {
   const [characters, setCharacters] = useState([]);
   const [name, setName] = useState('');
@@ -18,6 +19,12 @@ function App() {
   useEffect(() => {
     getDataFromApi().then(data => setCharacters(data));
   }, [])
+
+  const resetHandler = () => {
+    setName('');
+    setSpecies('all');
+    setSorting(false);
+  }
 
   const filterHandler = input => {
     if (input.key === 'name') {
@@ -59,7 +66,7 @@ function App() {
       <Header />
       <Switch>
         <Route exact path='/'>
-          <Filters filterHandler={filterHandler} />
+          <Filters filterHandler={filterHandler} resetHandler={resetHandler} />
           <CharacterList characters={filteredCharacters} />
         </Route>
         <Route path='/character/:id' render={renderDetail} />
