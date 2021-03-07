@@ -18,7 +18,7 @@ The website has an `<intuitive>` design with `<filters>` and functionalities tha
 ## :iphone: :computer: Responsive design 
 <img align="left" src="https://github.com/Adalab/modulo-3-evaluacion-final-cvcastano/blob/master/media%20for%20readme/mobile.png" width="200"> 
 <img align="left" src="https://github.com/Adalab/modulo-3-evaluacion-final-cvcastano/blob/master/media%20for%20readme/tablet.png" width="250"> 
-<img align="center" src="https://github.com/Adalab/modulo-3-evaluacion-final-cvcastano/blob/master/media%20for%20readme/desktop.jpg" width="450"> 
+<img align="left" src="https://github.com/Adalab/modulo-3-evaluacion-final-cvcastano/blob/master/media%20for%20readme/desktop.jpg" width="450"> 
 
 ## :card_index_dividers: Folders structure 
 
@@ -28,4 +28,4 @@ The website has an `<intuitive>` design with `<filters>` and functionalities tha
 
 <img align="left" src="https://github.com/Adalab/modulo-3-evaluacion-final-cvcastano/blob/master/media%20for%20readme/components.jpg" width="200"> 
 
-<img align="center" src="https://github.com/Adalab/modulo-3-evaluacion-final-cvcastano/blob/master/media%20for%20readme/stylesheets.jpg" width="200"> 
+<img align="left" src="https://github.com/Adalab/modulo-3-evaluacion-final-cvcastano/blob/master/media%20for%20readme/stylesheets.jpg" width="200"> 
