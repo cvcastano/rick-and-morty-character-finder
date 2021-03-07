@@ -5,13 +5,13 @@
 }
 
 .card-list {
-  padding-top: 1rem;
   padding-bottom: 4rem;
   display: grid;
   justify-content: center;
   grid-template-columns: 1fr;
 
   @media (min-width: 520px) {
+    padding-top: 1rem;
     grid-template-columns: repeat(2, 1fr);
   }
   @media (min-width: 768px) {
