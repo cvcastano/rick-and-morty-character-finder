@@ -12,7 +12,7 @@ The exercise consisted of developing a web page with a list of Rick and Morty ch
 
 We had to use `<React>` and the service of https://rickandmortyapi.com, which returns information about the first 20 characters of the series, as well as following a series of instructions regarding the components and functionalities of the project. 
 
-The website has an `<intuitive>` design with filters and functionalities that show details of the characters' characteristics.
+The website has an `<intuitive>` design with `<filters>` and functionalities that show details of the characters' characteristics.
 #
 
 ## :iphone: :computer: Responsive design 
