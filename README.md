@@ -21,7 +21,13 @@ The website has an intuitive design with filters and functionalities that show d
 
 ## :card_index_dividers: Folders structure 
 
-<img align="center" src="https://github.com/Adalab/modulo-3-evaluacion-final-cvcastano/blob/master/media%20for%20readme/folders.jpg" width="200"> 
+<img align="left" src="https://github.com/Adalab/modulo-3-evaluacion-final-cvcastano/blob/master/media%20for%20readme/folders.jpg" width="200"> 
+
+<img align="left" src="https://github.com/Adalab/modulo-3-evaluacion-final-cvcastano/blob/master/media%20for%20readme/src.jpg" width="200"> 
+
+<img align="left" src="https://github.com/Adalab/modulo-3-evaluacion-final-cvcastano/blob/master/media%20for%20readme/components.jpg" width="200"> 
+
+<img align="left" src="https://github.com/Adalab/modulo-3-evaluacion-final-cvcastano/blob/master/media%20for%20readme/stylesheets.jpg" width="200"> 
 
 
 
