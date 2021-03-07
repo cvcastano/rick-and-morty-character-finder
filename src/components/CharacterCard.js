@@ -5,6 +5,7 @@ import alive from '../images/alive.png';
 import human from '../images/human.png';
 import alien from '../images/alien.png';
 import unknown from '../images/unknown.png';
+import PropTypes from 'prop-types';
 
 
 function CharacterCard(props) {
@@ -50,5 +51,12 @@ function CharacterCard(props) {
     );
 }
 
+CharacterCard.propTypes = {
+    id: PropTypes.number,
+    image: PropTypes.string,
+    name: PropTypes.string,
+    species: PropTypes.string,
+
+};
 
 export default CharacterCard;
