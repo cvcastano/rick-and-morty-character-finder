@@ -1,4 +1,4 @@
-<img align="center" src="https://github.com/Adalab/modulo-3-evaluacion-final-cvcastano/blob/master/src/images/logo.png" width="200"> 
+<img align="center" src="https://github.com/Adalab/modulo-3-evaluacion-final-cvcastano/blob/master/src/images/logo.png" width="300"> 
 
 # Rick and Morty Character Finder  :mag:
 
