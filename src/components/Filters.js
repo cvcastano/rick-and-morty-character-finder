@@ -3,6 +3,7 @@ import FilterByName from './FilterByName';
 import FilterBySpecies from './FilterBySpecies';
 import SortByName from './SortByName';
 import Reset from './Reset';
+import FilterByGender from './FilterByGender';
 
 
 const submitHandler = (ev) => {
@@ -15,6 +16,7 @@ const Filters = props => {
       <form className="filters" onSubmit={submitHandler}>
         <FilterByName filterHandler={props.filterHandler} />
         <FilterBySpecies filterHandler={props.filterHandler} />
+        <FilterByGender filterHandler={props.filterHandler} />
       </form>
       <SortByName filterHandler={props.filterHandler} />
       <Reset resetHandler={props.resetHandler} />

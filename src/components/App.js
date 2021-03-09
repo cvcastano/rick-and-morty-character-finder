@@ -14,6 +14,7 @@ function App() {
   const [name, setName] = useState('');
   const [species, setSpecies] = useState('all');
   const [sorting, setSorting] = useState(false);
+  const [gender, setGender] = useState('all');
 
 
   useEffect(() => {
@@ -24,6 +25,7 @@ function App() {
     setName('');
     setSpecies('all');
     setSorting(false);
+    setGender('all');
   }
 
   const filterHandler = input => {
@@ -36,6 +38,9 @@ function App() {
     else if (input.key === 'sorting') {
       setSorting(true);
     }
+    else if (input.key === 'gender') {
+      setGender(input.value);
+    }
   };
 
   const filteredCharacters = characters
@@ -45,6 +50,11 @@ function App() {
     .filter(character => {
       return species === 'all' ? true : character.species === species
     })
+    .filter(character => {
+      return gender === 'all' ? true: character.gender === gender
+    })
+
+
   if (sorting) {
     filteredCharacters.sort(function (a, b) {
       if (a.name < b.name) { return -1; }
