@@ -3,6 +3,7 @@ import FilterByName from './FilterByName';
 import FilterBySpecies from './FilterBySpecies';
 import SortByName from './SortByName';
 import Reset from './Reset';
+import PropTypes from 'prop-types';
 
 
 const submitHandler = (ev) => {
@@ -22,3 +23,8 @@ const Filters = props => {
   )
 }
 export default Filters;
+
+Filters.propTypes = {
+  filterHandler: PropTypes.func,
+  resetHandler: PropTypes.func
+};

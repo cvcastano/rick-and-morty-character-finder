@@ -1,4 +1,5 @@
 import '../stylesheets/AllFilters.scss';
+import PropTypes from 'prop-types';
 
 function FilterByName(props) {
 
@@ -19,4 +20,6 @@ function FilterByName(props) {
 
 export default FilterByName;
 
-
+FilterByName.propTypes = {
+    filterHandler: PropTypes.func
+  };

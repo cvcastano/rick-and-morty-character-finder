@@ -1,6 +1,7 @@
 import '../stylesheets/CharacterDetail.scss';
 import { Link } from 'react-router-dom';
 import characterNotFound from '../images/characterNotFound.jpg';
+import PropTypes from 'prop-types';
 
 function CharacterDetail(props) {
 
@@ -41,3 +42,7 @@ function CharacterDetail(props) {
 }
 
 export default CharacterDetail;
+
+CharacterDetail.propTypes = {
+    characters: PropTypes.object
+  };

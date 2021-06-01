@@ -1,6 +1,7 @@
 import '../stylesheets/CharacterList.scss';
 import CharacterCard from './CharacterCard';
 import awJeez from '../images/awJeez.jpg';
+import PropTypes from 'prop-types';
 
 
 function CharacterList(props) {
@@ -26,3 +27,7 @@ function CharacterList(props) {
     }
 }
 export default CharacterList;
+
+CharacterList.propTypes = {
+    characters: PropTypes.array
+  };

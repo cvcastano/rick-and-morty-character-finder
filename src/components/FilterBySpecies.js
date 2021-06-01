@@ -1,5 +1,5 @@
 import '../stylesheets/AllFilters.scss';
-
+import PropTypes from 'prop-types';
 
 const FilterBySpecies = props => {
 
@@ -23,3 +23,7 @@ const FilterBySpecies = props => {
   )
 }
 export default FilterBySpecies;
+
+FilterBySpecies.propTypes = {
+  filterHandler: PropTypes.func
+};

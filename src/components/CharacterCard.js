@@ -52,11 +52,14 @@ function CharacterCard(props) {
 }
 
 CharacterCard.propTypes = {
-    id: PropTypes.number,
-    image: PropTypes.string,
-    name: PropTypes.string,
-    species: PropTypes.string,
-
+    character: PropTypes.object,
+};
+CharacterCard.defaultProps = {
+    episode: 'number',
+    id: 'number',
+    image: 'string',
+    name: 'string',
+    species: 'string'
 };
 
 export default CharacterCard;
